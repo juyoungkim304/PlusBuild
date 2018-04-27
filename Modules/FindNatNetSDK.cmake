@@ -16,10 +16,10 @@ SET(NATNET_SDK_PATH_HINTS
   "$ENV{PROGRAMW6432}/OptiTrack/NatNetSDK"
   "C:/Program Files (x86)/OptiTrack/NatNetSDK"
   "C:/Program Files/OptiTrack/NatNetSDK"
-  "../PLTools/OptiTrack/NatNet-2.10"
-  "../../PLTools/OptiTrack/NatNet-2.10"
-  "../trunk/PLTools/OptiTrack/NatNet-2.10"
-  "${CMAKE_CURRENT_BINARY_DIR}/PLTools/OptiTrack/NatNet-2.10"
+  #"../PLTools/OptiTrack/NatNet-2.10"
+  #"../../PLTools/OptiTrack/NatNet-2.10"
+  #"../trunk/PLTools/OptiTrack/NatNet-2.10"
+  #"${CMAKE_CURRENT_BINARY_DIR}/PLTools/OptiTrack/NatNet-2.10"
   )
 
 find_path(NATNET_SDK_DIR Readme-NatNet.txt
