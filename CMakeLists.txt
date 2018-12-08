@@ -265,6 +265,7 @@ OPTION(PLUS_USE_WITMOTIONTRACKER "Provide support for the WitMotion IMU Trackers
 IF(PLUS_USE_OvrvisionPro)
   OPTION(PLUS_TEST_OvrvisionPro "Enable testing of acquisition of stereo images from the OvrvisionPro" OFF)
 ENDIF()
+OPTION(PLUS_USE_PICOSCOPE "Provide support for PicoScope 2xxx series oscilloscopes" OFF)
 
 # ---------- Other devices ------------
 OPTION(PLUS_USE_TextRecognizer "Enable the text recognizer virtual device" OFF)
@@ -583,6 +584,13 @@ IF(PLUS_USE_ATRACSYS)
   FIND_PACKAGE(Atracsys)
   IF(NOT ATRACSYS_SDK_FOUND)
     MESSAGE(FATAL_ERROR "This project requires the Atracsys sTk Passive Tracking SDK to support the use of Atacsys optical trackers. One of the components is missing. Please verify configuration or turn off PLUS_USE_ATRACSYS")
+  ENDIF()
+ENDIF()
+
+IF(PLUS_USE_PICOSCOPE)
+  FIND_PACKAGE(PicoScopeSDK)
+  IF(NOT PICOSCOPE_SDK_FOUND)
+    MESSAGE(FATAL_ERROR "This project requires the PicoScope SDK for supporting PicoScope oscilloscopes.")
   ENDIF()
 ENDIF()
 
